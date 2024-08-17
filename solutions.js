@@ -25,25 +25,47 @@ function factorial(n) {
 
 // Find the Largest Number
 function findLargest(arr) {
-  // Add your code here
+  let Largest = arr[0];
+  for (let number in arr){
+    if (typeof number != 'number'){
+      console.log("Los datos de entrada no son adecuados");
+      break;
+    }
+    if (number>Largest){
+      Largest = number;
+    }
+    
+  }
 }
 
 // Count Vowels in a String
 function countVowels(str) {
-  // Add your code here
+  const vowels = ['a','e','i','o','u'];
+  let numVowels = 0;
+  for (const char in str){
+    if (typeof char != 'string'){
+      console.log("Los datos de entrada no son adecuados");
+      break;
+    }
+    else if (vowels.includes(char.toLowerCase())){
+        numVowels++;
+    }
+  }
+  return numVowels;
 }
 
 // Check if a Number is Prime
 function isPrime(n) {
-  if (typeof n == "number"){
-    let prime = false;
-    if(n%2!==0){
-      prime = true;
-    }
-    return prime
+  if(typeof n != 'number'){
+    console.log("Los datos de entrada no son adecuados");
   }
   else{
-    console.log("El dato de entrada no es adecuado");
+    for(let i;i<n;i++){
+      if (n%i==0){
+        return false
+      }
+      return true
+    }
   }
 }
 
