@@ -10,7 +10,17 @@ function sum(a, b) {
 
 // Factorial of a Number
 function factorial(n) {
-  // Add your code here
+  if (typeof n == "number"){
+  if (n == 0) {
+    return 1;
+  }
+  else{
+      return n*factorial(n-1);
+    }
+  }
+  else {
+    console.log("El dato de entrada no es adecuado");
+  }
 }
 
 // Find the Largest Number
