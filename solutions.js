@@ -41,12 +41,12 @@ function findLargest(arr) {
 function countVowels(str) {
   const vowels = ['a','e','i','o','u'];
   let numVowels = 0;
-  for (const char of str){
-  if (typeof char != 'string'){
-      console.log("Los datos de entrada no son adecuados");
-      break;
+  if (typeof str != 'string'){
+    console.log("Los datos de entrada no son adecuados");
+    return 0;
   }
-  else if (vowels.includes(char.toLowerCase())){
+  for (const char of str){
+  if (vowels.includes(char.toLowerCase())){
       numVowels++;
   }
   }
