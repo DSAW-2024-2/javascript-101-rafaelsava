@@ -1,11 +1,6 @@
 // Sum of Two Numbers
 function sum(a, b) {
-  if (typeof a == "number" && typeof b == "number"){
-    return a + b;
-  }
-  else {
-    return "Los datos de entrada no son adecuados";
-  }
+  return (typeof a === "number" && typeof b === "number") ? a + b : "Los datos de entrada no son adecuados";
 }
 
 // Factorial of a Number
